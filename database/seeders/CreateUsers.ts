@@ -7,12 +7,14 @@ export default class CreateUsers extends BaseSeeder {
   public async run() {
     await User.createMany([
       {
+        name: 'admin',
         email: 'admin@mail.com',
         password: 'secret',
         role: 'admin'
       },
 
       {
+        name: 'normal',
         email: 'normal@mail.com',
         password: 'secret'
       }

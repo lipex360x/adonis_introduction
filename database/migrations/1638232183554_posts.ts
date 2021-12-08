@@ -8,6 +8,13 @@ export default class Posts extends BaseSchema {
       table.increments('id').primary()
       table.string('title')
       table.text('content', 'longtext')
+      table
+        .integer('author_id')
+        .unsigned()
+        .references('id')
+        .inTable('users')
+        .onUpdate('CASCADE')
+        .onDelete('CASCADE')
       table.timestamps(true)
     })
   }
