@@ -9,5 +9,7 @@ export class StoreValidator {
     content: schema.string({ trim: true })
   })
 
-  public messages = {}
+  public messages = {
+    required: '{{ field }} is required'
+  }
 }
